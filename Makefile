@@ -1,7 +1,7 @@
-CC=clang
+CC=gcc
 AS=as
 AR=ar
-LD=clang
+LD=gcc
 CP=llvm-objcopy
 
 PLATFORM_ARCH         = $(shell uname -s)
@@ -19,7 +19,7 @@ TARGET_TYPE_DLL = $(MK_TRUE)
 # ** 项目配置区 **
 #
 #    输出文件名称
-TARGET_NAME     = libcpp
+TARGET_NAME     = libes
 #    输出文件后缀 [自动判别]
 TARGET_BIN_EXT = 
 TARGET_LIB_EXT_STATIC  =
