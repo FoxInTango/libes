@@ -34,6 +34,8 @@
 /** Todo
  *  this
  *  super
+ *  auguments
+ *  
  *  constructor
  *  prototype
  *  extends
@@ -59,6 +61,7 @@
  *  continue
  *  break
  *  return 
+ *
  *  try
  *  cach
  *
@@ -66,6 +69,23 @@
  * 
  *  typeof
  *  instanceof
+ *  +
+ *  -
+ *  * 
+ *  /
+ *  ^
+ *  %
+ *  = 
+ *  get
+ *  set
+ *  ==
+ *  ===
+ *  !
+ *  &
+ *  |
+ *  ~
+ *  ||
+ *  &&
  */
 
 #define es_number_0 L'0'
@@ -105,10 +125,10 @@
 #define es_token_keyword_new       L"new"
 
  /**
-  * bracket 圆括号
-  * angle   尖括号
-  * square  方括号
-  * Braces  大括号
+  * bracket  ()
+  * angle    <>
+  * square   []
+  * Braces   {}
   */
 #define es_unsure             0
 #define es_token_bracket_l    1
