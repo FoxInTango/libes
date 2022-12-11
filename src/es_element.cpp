@@ -59,7 +59,15 @@ class es_element_number      :public es_element_implement{};
 class es_element_array       :public es_element_implement{};
 class es_element_object      :public es_element_implement{};
 class es_element_function    :public es_element_implement{};
-class es_element_scope       :public es_element_implement{};
-class es_element_return      :public es_element_implement{};/** jump to highter level*/
-class es_element_switch      :public es_element_implement{};/** if | switch */
-class es_element_loop        :public es_element_implement{};
+
+class es_element_return      :public es_element_implement{};/** jump to higher level*/
+class es_element_break       :public es_element_implement{};
+class es_element_continue    :public es_element_implement{};
+
+class es_element_scope       :public es_element_implement{};/** () | {} */
+class es_element_switch      :public es_element_scope{};/** if | switch */
+class es_element_for         :public es_element_scope{};
+class es_element_while       :public es_element_scope{};
+class es_element_do          :public es_element_scope{};
+class es_element_in          :public es_element_scope{};
+

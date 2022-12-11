@@ -23,7 +23,6 @@
  */
 #ifndef _es_element_h_
 #define _es_element_h_
-#include "es_prototype.h"
 /**
  * 
  */

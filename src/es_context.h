@@ -23,6 +23,7 @@
  */
 #ifndef _es_context_h_
 #define _es_context_h_
+#include "es_element.h"
 
 class es_context{
 public:
