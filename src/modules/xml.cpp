@@ -21,3 +21,8 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
+
+ #include "../es_element.h"
+ class XMLElement :public es_element {
+ 
+ };

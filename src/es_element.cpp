@@ -23,9 +23,7 @@
  */
 #include "es_element.h"
 #include "es_context.h"
-#include <vector>
-#include <map>
-
+#include "std.h"
 /**
  * objects:
  *     var obj = {} | "" | 2000 | ["","",{}];
@@ -38,11 +36,12 @@
  *     
  */
 typedef std::vector<es_element*> ES_element_array;
+typedef std::map<std::wstring, es_element*> ES_element_name_map;
+
 class es_element_implement{
 public:
     es_element*         owner;
     es_context*         context;
-    //es_prototype        prototype;
     ES_element_array    subelements;
 public:
     es_element_implement(){
@@ -65,6 +64,7 @@ class es_element_break       :public es_element_implement{};
 class es_element_continue    :public es_element_implement{};
 
 class es_element_scope       :public es_element_implement{};/** () | {} */
+class es_element_expression  :public es_element_scope{};
 class es_element_switch      :public es_element_scope{};/** if | switch */
 class es_element_for         :public es_element_scope{};
 class es_element_while       :public es_element_scope{};

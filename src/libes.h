@@ -21,3 +21,10 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
+
+ #include "es_context.h"
+ #include "es_document.h"
+ #include "es_element.h"
+ #include "es_token.h"
+
+ void libes_init();

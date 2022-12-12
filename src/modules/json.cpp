@@ -21,3 +21,8 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
+
+#include "../es_element.h"
+class JSONElement :public es_element {
+
+};

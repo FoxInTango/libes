@@ -24,18 +24,6 @@
 #ifndef _es_token_h_
 #define _es_token_h_
 
-/** 内置对象
- *  globalThis
- *  prototype
- *  auguments
- */
-
-/** Todo
- *  bool ? x : y 
- *  字符串处理
- *  注释处理
- */
-
 #define es_number_0  L'0'
 #define es_number_1  L'1'
 #define es_number_2  L'2'
@@ -75,14 +63,14 @@
 #define es_token_mark_quote_d              L'"'
 #define es_token_mark_colon                L':'
 #define es_token_mark_semi                 L';'
-#define es_token_mark_slash                L'/' // 1 / | 2 // | 3 /*
+#define es_token_mark_slash                L'/' // 1 / | 2 // | 3 /* | 4 */
 #define es_token_mark_bslash               L'\\'
 #define es_token_mark_vbar                 L'|' // 1 | | 2 || | 3 |=
 #define es_token_mark_wave                 L'~' // 1 ~ | 2 ~= 
 #define es_token_mark_woo                  L'!' // 1 ! | 2 != | 3 !==
-#define es_token_mark_at                   L'@'
-#define es_token_mark_sharp                L'#'
-#define es_token_mark_usd                  L'$'
+#define es_token_mark_at                   L'@' // PASS
+#define es_token_mark_sharp                L'#' // PASS
+#define es_token_mark_usd                  L'$' // PASS
 #define es_token_mark_percent              L'%' // 1 % | 2 %=
 #define es_token_mark_arrow_up             L'^' // 1 ^ | 2 ^=
 #define es_token_mark_and                  L'&' // 1 & | 2 && | 3 &=
@@ -114,6 +102,8 @@
 #define es_token_operator_mod              L'%'
 #define es_token_operator_exp              L'^'
 
+#define es_token_operator_what             L'?'
+#define es_token_operator_comma            L','
 /**
  * bw : bitwise  
  */
@@ -121,13 +111,14 @@
 #define es_token_operator_bw_or            L'|'
 #define es_token_operator_bw_xor           L'^'
 #define es_token_operator_bw_not           L'~'
-
+#define es_token_operator_shift_l          L"<<"
+#define es_token_operator_shift_r          L">>"
+/**
+ * lg : logic
+ */
 #define es_token_operator_lg_and           L"&&"
 #define es_token_operator_lg_or            L"||"
 #define es_token_operator_lg_not           L'!'
-
-#define es_token_operator_shift_l          L"<<"
-#define es_token_operator_shift_r          L">>"
 
 #define es_token_comment_short             L"//"
 #define es_token_comment_long_l            L"/*"
@@ -182,7 +173,6 @@
 #define es_token_keyword_const             L"const"
 #define es_token_keyword_var               L"var"
 #define es_token_keyword_let               L"let"
-#define es_token_keyword_static            L"static"
 #define es_token_keyword_function          L"function"
 #define es_token_keyword_class             L"class"
 #define es_token_keyword_export            L"export"
@@ -259,8 +249,8 @@
 #define es_token_ne            61    // L"!="
 #define es_token_nef           62    // L"!=="
 
-#define es_token_typeof        63    // L"typeof"
-#define es_token_instof        64    // L"instanceof"
+#define es_token_typeof        63    // L"typeof"      https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof
+#define es_token_instof        64    // L"instanceof"  https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof
 
 #define es_token_new           65     // L"new"
 #define es_token_this          66     // L"this"
@@ -330,4 +320,7 @@ wchar_t* documentURL;
 unsigned int lineIndex;
 unsigned int charIndex;
 }es_token;
+
+void es_token_init();
+bool es_token_is_mask(const wchar_t& c);
 #endif

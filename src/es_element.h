@@ -37,11 +37,11 @@ public:
     ~es_element();
 public:
 public:
-    unsigned int appendSubelement(es_element* element);
-    unsigned int removeSubelement(es_element* element);
-    unsigned int removeSubelement(const unsigned int& index);
+    unsigned int append_subelement(es_element* element);
+    unsigned int remove_subelement(es_element* element);
+    unsigned int remove_subelement(const unsigned int& index);
 
-    int attachContext();
+    int attach_context();
 
     int load(const es_document* document,const unsigned int& index);
 public:

@@ -23,11 +23,20 @@
  */
 #ifndef _es_context_h_
 #define _es_context_h_
+#include "es_document.h"
 #include "es_element.h"
 
 class es_context{
 public:
     es_context();
    ~es_context();
+public:
+    es_document* document_at(char* url);
+public:
+    int append_global_element(es_element* e,const char* name=nullptr);
+    int remove_global_element(es_element* e);
+    int remove_global_element(const char* name=nullptr);
+public:
+    int load_document();
 };
 #endif
