@@ -49,5 +49,21 @@
 
    整理 测试项目
 
+   字符串转义
+   文本换行连接
+
    0 1 2 3 4 5 6 7 8 9 
      f u n c t i o n
+
+io.listen
+io.connect
+io.request
+io.response
+
+fs.listen
+
+// 错误识别 符号连接
+const username='sparrow' 
+const password = 'someonelikeyou'
+
+可能的连接 与 不可能的连接

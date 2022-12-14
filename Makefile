@@ -1,7 +1,7 @@
 CC=gcc
 AS=as
 AR=ar
-LD=gcc
+LD=ld
 CP=llvm-objcopy
 
 PLATFORM_ARCH         = $(shell uname -s)

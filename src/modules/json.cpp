@@ -23,6 +23,6 @@
  */
 
 #include "../es_element.h"
-class JSONElement :public es_element {
+class JSONElement {
 
 };

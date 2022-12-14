@@ -23,13 +23,15 @@
  */
 #ifndef _es_element_h_
 #define _es_element_h_
+#include <libcpp/libcpp.h>
 /**
  * 
  */
+namespaceBegin(foxintango)
 class es_context;
 class es_document;
 class es_element_implement;
-class es_element{
+class foxintangoAPI es_element{
 protected:
     es_element_implement* implement;
 public:
@@ -47,5 +49,5 @@ public:
 public:
     int run();
 };
-
+namespaceEnd
 #endif

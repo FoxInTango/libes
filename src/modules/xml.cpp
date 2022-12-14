@@ -23,6 +23,6 @@
  */
 
  #include "../es_element.h"
- class XMLElement :public es_element {
+ class XMLElement {
  
  };

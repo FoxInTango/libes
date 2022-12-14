@@ -1,7 +1,16 @@
 #include "es_context.h"
-#include "std.h"
-
-static std::map<es_context*,std::map<std::string,es_document*>*> context_document_map;
+#include <vector>
+#include <map>
+#include <set>
+#include <fstream>
+#include <codecvt>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cassert>
+#include <locale>
+using namespace foxintango;
+static std::map<foxintango::es_context*,std::map<std::string, foxintango::es_document*>*> context_document_map;
 
 es_context::es_context(){
     if(!context_document_map.count(this)){

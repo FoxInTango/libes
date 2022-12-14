@@ -25,8 +25,11 @@
 #define _es_context_h_
 #include "es_document.h"
 #include "es_element.h"
+#include <libcpp/libcpp.h>
 
-class es_context{
+namespaceBegin(foxintango)
+
+class foxintangoAPI es_context{
 public:
     es_context();
    ~es_context();
@@ -39,4 +42,6 @@ public:
 public:
     int load_document();
 };
+
+namespaceEnd
 #endif

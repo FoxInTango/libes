@@ -23,7 +23,17 @@
  */
 #include "es_element.h"
 #include "es_context.h"
-#include "std.h"
+#include <vector>
+#include <map>
+#include <set>
+#include <fstream>
+#include <codecvt>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cassert>
+#include <locale>
+using namespace foxintango;
 /**
  * objects:
  *     var obj = {} | "" | 2000 | ["","",{}];
@@ -35,9 +45,10 @@
  *     
  *     
  */
-typedef std::vector<es_element*> ES_element_array;
+typedef std::vector<foxintango::es_element*> ES_element_array;
 typedef std::map<std::wstring, es_element*> ES_element_name_map;
 
+namespaceBegin(foxintango)
 class es_element_implement{
 public:
     es_element*         owner;
@@ -57,7 +68,6 @@ class es_element_string      :public es_element_implement{};
 class es_element_number      :public es_element_implement{};
 class es_element_array       :public es_element_implement{};
 class es_element_object      :public es_element_implement{};
-class es_element_function    :public es_element_implement{};
 
 class es_element_return      :public es_element_implement{};/** jump to higher level*/
 class es_element_break       :public es_element_implement{};
@@ -65,9 +75,11 @@ class es_element_continue    :public es_element_implement{};
 
 class es_element_scope       :public es_element_implement{};/** () | {} */
 class es_element_expression  :public es_element_scope{};
+class es_element_function    :public es_element_scope{};
 class es_element_switch      :public es_element_scope{};/** if | switch */
 class es_element_for         :public es_element_scope{};
 class es_element_while       :public es_element_scope{};
 class es_element_do          :public es_element_scope{};
 class es_element_in          :public es_element_scope{};
-
+class es_element_try         :public es_element_scope {};
+namespaceEnd
