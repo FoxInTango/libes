@@ -52,13 +52,7 @@ TARGET_OBJECTS_PP  += $(patsubst %.cpp,%.o,$(TARGET_SOURCES_PP))
 TARGET_HEADER_DIRS += $(foreach dir,$(PROJECT_DIRS),-I$(dir))                         # $(wildcard $(TARGET_HEADERS_DIR)/*.h)
 
 # 链接库配置
-TARGET_LIB_INCLUDE =
-TARGET_LIB_BINARY  =
-TARGET_LD_FLAGS    =
-
-TARGET_LIB_INCLUDE =
-TARGET_LIB_BINARY  =
-TARGET_LD_FLAGS    =
+TARGET_LD_FLAGS   += #-L ${SUPER_LIBRARY_PATH} 
 # 需要链接的库
 TARGET_LIBS = -lstdc++
 # 链接标志
@@ -72,8 +66,8 @@ TARGET_LIB_PIC  =
 TARGET_LIB_FLAG = 
 
 ASFLAGS =
-CCFLAGS = -c -Wall -fvisibility=hidden  #-I${TARGET_HEADER_DIRS}
-PPFLAGS = -c -Wall -fvisibility=hidden -std=c++11
+CCFLAGS = -c -Wall -fvisibility=hidden -std=c++11 -I${SUPER_INCLUDE_PATH}
+PPFLAGS = -c -Wall -fvisibility=hidden -std=c++11 -I${SUPER_INCLUDE_PATH}
 # 平台检测 -- DARWIN
 ifeq (${PLATFORM_ARCH},${PLATFORM_ARCH_DARWIN})
     TARGET_BIN_EXT         :=
@@ -105,6 +99,7 @@ endif
 ifeq ($(TARGET_TYPE_BIN),$(MK_TRUE))
 TARGETS += ${TARGET_BIN_DIR}/${TARGET_NAME}.${TARGET_BIN_EXT}
 endif
+
 
 ALL : $(TARGETS)
 

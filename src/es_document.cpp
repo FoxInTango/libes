@@ -97,16 +97,15 @@ int es_document::load(const char* path) {
                 bool asked = false;
                 while(step = es_token_what_is(unsure.c_str(), asked,token, tokens) != 0){
                     if (step > 0) {
-                        for (int i = 0; i < how; i++) {
+                        for (int i = 0; i < step; i++) {
                             unsure += wline[char_index + i + 1];
                         }
                     } else {
                         asked = true;
                     }
                 }
-
                 tokens.append(token);
-                char_index += (how + 1);
+                char_index += (step + 1);
             }
         }
         es_token_array& document_tokens = *(document_token_array_map.at(this));
