@@ -73,7 +73,10 @@ class es_element_return      :public es_element_implement{};/** jump to higher l
 class es_element_break       :public es_element_implement{};
 class es_element_continue    :public es_element_implement{};
 
-class es_element_scope       :public es_element_implement{};/** () | {} */
+class es_element_scope       :public es_element_implement{
+public:
+    ES_element_name_map elementMap;
+};/** () | {} */
 class es_element_expression  :public es_element_scope{};
 class es_element_function    :public es_element_scope{};
 class es_element_switch      :public es_element_scope{};/** if | switch */
