@@ -56,11 +56,9 @@ public:
     ES_element_array    subelements;
 public:
     es_element_implement(){
-
     }
 
     ~es_element_implement(){
-    
     }
 };
 
@@ -84,5 +82,5 @@ class es_element_for         :public es_element_scope{};
 class es_element_while       :public es_element_scope{};
 class es_element_do          :public es_element_scope{};
 class es_element_in          :public es_element_scope{};
-class es_element_try         :public es_element_scope {};
+class es_element_try         :public es_element_scope{};
 namespaceEnd
