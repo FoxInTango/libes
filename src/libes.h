@@ -27,4 +27,6 @@
  #include "es_element.h"
  #include "es_token.h"
  #include <libcpp/libcpp.h>
+EXTERN_C_BEGIN
  void foxintangoAPI libes_init();
+EXTERN_C_END

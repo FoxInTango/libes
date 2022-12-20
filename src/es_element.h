@@ -27,6 +27,7 @@
 /**
  * 
  */
+EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 class es_context;
 class es_document;
@@ -42,12 +43,9 @@ public:
     unsigned int append_subelement(es_element* element);
     unsigned int remove_subelement(es_element* element);
     unsigned int remove_subelement(const unsigned int& index);
-
-    int attach_context();
-
-    int load(const es_document* document,const unsigned int& index);
 public:
     int run();
 };
 namespaceEnd
+EXTERN_C_END
 #endif

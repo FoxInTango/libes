@@ -25,6 +25,7 @@
 #define _es_document_h_
 #include "es_element.h"
 #include <libcpp/libcpp.h>
+EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 
 class foxintangoAPI es_document{
@@ -37,4 +38,5 @@ public:
     es_element* build();
 };
 namespaceEnd
+EXTERN_C_END
 #endif

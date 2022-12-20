@@ -27,8 +27,8 @@
 #include "es_element.h"
 #include <libcpp/libcpp.h>
 
+EXTERN_C_BEGIN
 namespaceBegin(foxintango)
-
 class foxintangoAPI es_context{
 public:
     es_context();
@@ -42,6 +42,6 @@ public:
 public:
     int load_document();
 };
-
 namespaceEnd
+EXTERN_C_END
 #endif
