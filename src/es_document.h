@@ -24,16 +24,21 @@
 #ifndef _es_document_h_
 #define _es_document_h_
 #include "es_element.h"
+#include <libast/libast.h>
 #include <libcpp/libcpp.h>
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 
-class foxintangoAPI es_document{
+class foxintangoAPI es_document :ASTDocument{
 public:
     es_document();
    ~es_document();
 public:
     int load(const char* path);
+    ASTScope* load_scope();
+    ASTClass* load_class();
+    ASTFunction* load_function();
+    ASTExpression* load_expression();
 public:
     es_element* build();
 };
