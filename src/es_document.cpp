@@ -53,7 +53,7 @@ es_document::~es_document() {
     }
 }
 
-int es_document::load(const char* path) {
+Error es_document::load(const char* path) {
     std::ifstream stream(path);
     if(!stream || !document_token_array_map.at(this)) return -1;
 #ifdef DEBUG
