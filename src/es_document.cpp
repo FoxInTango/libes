@@ -124,3 +124,8 @@ Error es_document::load(const char* path) {
 
     return 0;
 }
+
+ASTScope* es_document::load_scope(){ return 0; }
+ASTClass* es_document::load_class() { return 0; }
+ASTFunction* es_document::load_function() { return 0; }
+ASTExpression* es_document::load_expression() { return 0; }
