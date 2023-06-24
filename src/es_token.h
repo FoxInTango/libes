@@ -333,6 +333,7 @@ unsigned int lineIndex;
 unsigned int charIndex;
 }es_token;
 
+/*
 class es_token_array{
 public:
     es_token_array();
@@ -350,8 +351,8 @@ public:
 public:
     const es_token& operator [] (const unsigned int& index);
 };
-
-void es_token_init();
+*/
+//void es_token_init();
 /**
  * return : 0 normal
  *          - back
@@ -359,6 +360,5 @@ void es_token_init();
  *  const
  *  consts 
  */
-int es_token_what_is(const wchar_t* const text, const bool& asked,es_token& token,const es_token_array& array);
-/** 详：控制字符 */
+//int es_token_what_is(const wchar_t* const text, const bool& asked,es_token& token,const es_token_array& array);
 #endif
