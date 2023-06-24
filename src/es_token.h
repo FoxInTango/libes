@@ -31,24 +31,24 @@
  *   分割 -- 字符串以外的空格
  */
 
-#define es_number_0  L'0'
-#define es_number_1  L'1'
-#define es_number_2  L'2'
-#define es_number_3  L'3'
-#define es_number_4  L'4'
-#define es_number_5  L'5'
-#define es_number_6  L'6'
-#define es_number_7  L'7'
-#define es_number_8  L'8'
-#define es_number_9  L'9'
-#define es_number_0b L"0b"  // 二进制
-#define es_number_0B L"0B"  // 二进制
-#define es_number_0x L"0x"  // 十六进制
-#define es_number_0X L"0X"  // 十六进制
-#define es_number_0o L"0o"  // 八进制
-#define es_number_0O L"0O"  // 八进制
-#define es_number_e  L'e'   // 科学计数法
-#define es_number_E  L'E'   // 科学计数法
+#define es_number_0  U'0'
+#define es_number_1  U'1'
+#define es_number_2  U'2'
+#define es_number_3  U'3'
+#define es_number_4  U'4'
+#define es_number_5  U'5'
+#define es_number_6  U'6'
+#define es_number_7  U'7'
+#define es_number_8  U'8'
+#define es_number_9  U'9'
+#define es_number_0b U"0b"  // 二进制
+#define es_number_0B U"0B"  // 二进制
+#define es_number_0x U"0x"  // 十六进制
+#define es_number_0X U"0X"  // 十六进制
+#define es_number_0o U"0o"  // 八进制
+#define es_number_0O U"0O"  // 八进制
+#define es_number_e  U'e'   // 科学计数法
+#define es_number_E  U'E'   // 科学计数法
 
 /**
  * bracket  ()
@@ -56,81 +56,81 @@
  * square   []
  * braces   {}
  */
-#define es_token_mark_bracket_l            L"("
-#define es_token_mark_bracket_r            L")"
-#define es_token_mark_angle_l              L"<" // 1 < | 2 << | 3 <=
-#define es_token_mark_angle_r              L">" // 1 > | 2 >> | 3 >=
-#define es_token_mark_square_l             L"["
-#define es_token_mark_square_r             L"]"
-#define es_token_mark_brace_l              L"{"
-#define es_token_mark_brace_r              L"}"
-#define es_token_mark_dot                  L"."
-#define es_token_mark_space                L" "
-#define es_token_mark_quote_s              L"'"
-#define es_token_mark_quote_d              L"\""
-#define es_token_mark_colon                L":"
-#define es_token_mark_semi                 L";"
-#define es_token_mark_slash                L"/" // 1 / | 2 // | 3 /* | 4 */
-#define es_token_mark_bslash               L"\\"
-#define es_token_mark_vbar                 L"|" // 1 | | 2 || | 3 |=
-#define es_token_mark_wave                 L"~" // 1 ~ | 2 ~= 
-#define es_token_mark_woo                  L"!" // 1 ! | 2 != | 3 !==
-#define es_token_mark_at                   L"@" // PASS
-#define es_token_mark_sharp                L"#" // PASS
-#define es_token_mark_usd                  L"$" // PASS
-#define es_token_mark_percent              L"%" // 1 % | 2 %=
-#define es_token_mark_arrow_up             L"^" // 1 ^ | 2 ^=
-#define es_token_mark_and                  L"&" // 1 & | 2 && | 3 &=
-#define es_token_mark_what                 L"?"
-#define es_token_mark_comma                L","
-#define es_token_mark_cross                L"+" // 1 + | 2 += | 3 ++
-#define es_token_mark_hyphen               L"-" // 1 - | 2 -= | 3 --
-#define es_token_mark_star                 L"*" // 1 * | 2 *= | 3 */
-#define es_token_mark_dhbar                L"=" // 1 = | 2 == | 3 ===
+#define es_token_mark_bracket_l            U"("
+#define es_token_mark_bracket_r            U")"
+#define es_token_mark_angle_l              U"<" // 1 < | 2 << | 3 <=
+#define es_token_mark_angle_r              U">" // 1 > | 2 >> | 3 >=
+#define es_token_mark_square_l             U"["
+#define es_token_mark_square_r             U"]"
+#define es_token_mark_brace_l              U"{"
+#define es_token_mark_brace_r              U"}"
+#define es_token_mark_dot                  U"."
+#define es_token_mark_space                U" "
+#define es_token_mark_quote_s              U"'"
+#define es_token_mark_quote_d              U"\""
+#define es_token_mark_coUon                U":"
+#define es_token_mark_semi                 U";"
+#define es_token_mark_sUash                U"/" // 1 / | 2 // | 3 /* | 4 */
+#define es_token_mark_bsUash               U"\\"
+#define es_token_mark_vbar                 U"|" // 1 | | 2 || | 3 |=
+#define es_token_mark_wave                 U"~" // 1 ~ | 2 ~= 
+#define es_token_mark_woo                  U"!" // 1 ! | 2 != | 3 !==
+#define es_token_mark_at                   U"@" // PASS
+#define es_token_mark_sharp                U"#" // PASS
+#define es_token_mark_usd                  U"$" // PASS
+#define es_token_mark_percent              U"%" // 1 % | 2 %=
+#define es_token_mark_arrow_up             U"^" // 1 ^ | 2 ^=
+#define es_token_mark_and                  U"&" // 1 & | 2 && | 3 &=
+#define es_token_mark_what                 U"?"
+#define es_token_mark_comma                U","
+#define es_token_mark_cross                U"+" // 1 + | 2 += | 3 ++
+#define es_token_mark_hyphen               U"-" // 1 - | 2 -= | 3 --
+#define es_token_mark_star                 U"*" // 1 * | 2 *= | 3 */
+#define es_token_mark_dhbar                U"=" // 1 = | 2 == | 3 ===
 
-#define es_token_operator_assign           L"="
+#define es_token_operator_assign           U"="
 
-#define es_token_operator_assign_add       L"+="
-#define es_token_operator_assign_add_s     L"++"
-#define es_token_operator_assign_sub       L"-="
-#define es_token_operator_assign_sub_s     L"--"
+#define es_token_operator_assign_add       U"+="
+#define es_token_operator_assign_add_s     U"++"
+#define es_token_operator_assign_sub       U"-="
+#define es_token_operator_assign_sub_s     U"--"
 
-#define es_token_operator_assign_mul       L"*="
-#define es_token_operator_assign_exc       L"/="
-#define es_token_operator_assign_mod       L"%="
-#define es_token_operator_assign_exp       L"^="
-#define es_token_operator_assign_bw_and    L"&="
-#define es_token_operator_assign_bw_or     L"|="
-#define es_token_operator_assign_bw_not    L"~="
+#define es_token_operator_assign_muU       U"*="
+#define es_token_operator_assign_exc       U"/="
+#define es_token_operator_assign_mod       U"%="
+#define es_token_operator_assign_exp       U"^="
+#define es_token_operator_assign_bw_and    U"&="
+#define es_token_operator_assign_bw_or     U"|="
+#define es_token_operator_assign_bw_not    U"~="
 
-#define es_token_operator_add              L"+"
-#define es_token_operator_sub              L"-"
-#define es_token_operator_mul              L"*"
-#define es_token_operator_exc              L"/"
-#define es_token_operator_mod              L"%"
-#define es_token_operator_exp              L"^"
+#define es_token_operator_add              U"+"
+#define es_token_operator_sub              U"-"
+#define es_token_operator_muU              U"*"
+#define es_token_operator_exc              U"/"
+#define es_token_operator_mod              U"%"
+#define es_token_operator_exp              U"^"
 
-#define es_token_operator_what             L"?"
-#define es_token_operator_comma            L","
+#define es_token_operator_what             U"?"
+#define es_token_operator_comma            U","
 /**
  * bw : bitwise  
  */
-#define es_token_operator_bw_and           L"&"
-#define es_token_operator_bw_or            L"|"
-#define es_token_operator_bw_xor           L"^"
-#define es_token_operator_bw_not           L"~"
-#define es_token_operator_shift_l          L"<<"
-#define es_token_operator_shift_r          L">>"
+#define es_token_operator_bw_and           U"&"
+#define es_token_operator_bw_or            U"|"
+#define es_token_operator_bw_xor           U"^"
+#define es_token_operator_bw_not           U"~"
+#define es_token_operator_shift_l          U"<<"
+#define es_token_operator_shift_r          U">>"
 /**
  * lg : logic
  */
-#define es_token_operator_lg_and           L"&&"
-#define es_token_operator_lg_or            L"||"
-#define es_token_operator_lg_not           L'!'
+#define es_token_operator_lg_and           U"&&"
+#define es_token_operator_lg_or            U"||"
+#define es_token_operator_lg_not           U'!'
 
-#define es_token_comment_short             L"//"
-#define es_token_comment_long_l            L"/*"
-#define es_token_comment_long_r            L"*/"
+#define es_token_comment_short             U"//"
+#define es_token_comment_long_l            U"/*"
+#define es_token_comment_long_r            U"*/"
 /**
  * c : compare
  * g : greater
@@ -138,55 +138,55 @@
  * e : equal
  * f : full
  */
-#define es_token_operator_cg               L">"
-#define es_token_operator_cl               L"<"
-#define es_token_operator_cge              L">="
-#define es_token_operator_cle              L"<="
-#define es_token_operator_ce               L"=="
-#define es_token_operator_cef              L"==="
-#define es_token_operator_ne               L"!="
-#define es_token_operator_nef              L"!=="
+#define es_token_operator_cg               U">"
+#define es_token_operator_cl               U"<"
+#define es_token_operator_cge              U">="
+#define es_token_operator_cle              U"<="
+#define es_token_operator_ce               U"=="
+#define es_token_operator_cef              U"==="
+#define es_token_operator_ne               U"!="
+#define es_token_operator_nef              U"!=="
 
-#define es_token_operator_typeof           L"typeof"
-#define es_token_operator_instof           L"instanceof"
+#define es_token_operator_typeof           U"typeof"
+#define es_token_operator_instof           U"instanceof"
 
-#define es_token_keyword_this              L"this"
-#define es_token_keyword_super             L"super"
-#define es_token_keyword_consfun           L"constructor"
-#define es_token_keyword_extends           L"extends"
-#define es_token_keyword_set               L"set"
-#define es_token_keyword_get               L"get"
+#define es_token_keyword_this              U"this"
+#define es_token_keyword_super             U"super"
+#define es_token_keyword_consfun           U"constructor"
+#define es_token_keyword_extends           U"extends"
+#define es_token_keyword_set               U"set"
+#define es_token_keyword_get               U"get"
 
-#define es_token_keyword_true              L"true"
-#define es_token_keyword_flase             L"false"
-#define es_token_keyword_null              L"null"
-#define es_token_keyword_undefined         L"undefined"
+#define es_token_keyword_true              U"true"
+#define es_token_keyword_flase             U"false"
+#define es_token_keyword_null              U"null"
+#define es_token_keyword_undefined         U"undefined"
 
-#define es_token_keyword_if                L"if"
-#define es_token_keyword_else              L"else"
-#define es_token_keyword_switch            L"switch"
-#define es_token_keyword_case              L"case"
-#define es_token_keyword_default           L"default"
-#define es_token_keyword_do                L"do"
-#define es_token_keyword_while             L"while"
-#define es_token_keyword_for               L"for"
-#define es_token_keyword_in                L"in"
-#define es_token_keyword_try               L"try"
-#define es_token_keyword_catch             L"catch"
-#define es_token_keyword_continue          L"continue"
-#define es_token_keyword_break             L"break"
-#define es_token_keyword_return            L"return"
+#define es_token_keyword_if                U"if"
+#define es_token_keyword_else              U"else"
+#define es_token_keyword_switch            U"switch"
+#define es_token_keyword_case              U"case"
+#define es_token_keyword_default           U"default"
+#define es_token_keyword_do                U"do"
+#define es_token_keyword_while             U"while"
+#define es_token_keyword_for               U"for"
+#define es_token_keyword_in                U"in"
+#define es_token_keyword_try               U"try"
+#define es_token_keyword_catch             U"catch"
+#define es_token_keyword_continue          U"continue"
+#define es_token_keyword_break             U"break"
+#define es_token_keyword_return            U"return"
 
-#define es_token_keyword_static            L"static"
-#define es_token_keyword_const             L"const"
-#define es_token_keyword_var               L"var"
-#define es_token_keyword_let               L"let"
-#define es_token_keyword_function          L"function"
-#define es_token_keyword_class             L"class"
-#define es_token_keyword_export            L"export"
-#define es_token_keyword_import            L"import"
-#define es_token_keyword_throw             L"throw"
-#define es_token_keyword_new               L"new"
+#define es_token_keyword_static            U"static"
+#define es_token_keyword_const             U"const"
+#define es_token_keyword_var               U"var"
+#define es_token_keyword_let               U"let"
+#define es_token_keyword_function          U"function"
+#define es_token_keyword_class             U"class"
+#define es_token_keyword_export            U"export"
+#define es_token_keyword_import            U"import"
+#define es_token_keyword_throw             U"throw"
+#define es_token_keyword_new               U"new"
 
 /** enum */
 typedef enum _es_token_type {
