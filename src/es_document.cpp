@@ -38,19 +38,11 @@ using namespace foxintango;
 #define DEBUG
 #define ES_file_line_length_max 2048
 
-static std::map<es_document*, es_token_array*> document_token_array_map;
 using namespace foxintango;
 es_document::es_document() {
-    if(!document_token_array_map.count(this)) {
-        document_token_array_map.insert(std::pair<es_document*, es_token_array*>(this, new es_token_array()));
-    }
 }
 
 es_document::~es_document() {
-    if(document_token_array_map.count(this)) {
-        delete document_token_array_map.at(this);
-        document_token_array_map.erase(this);
-    }
 }
 
 /*
