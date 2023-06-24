@@ -29,7 +29,7 @@
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 
-class foxintangoAPI es_document :ASTDocument{
+class foxintangoAPI es_document{
 public:
     es_document();
    ~es_document();
