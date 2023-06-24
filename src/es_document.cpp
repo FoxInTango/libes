@@ -53,6 +53,7 @@ es_document::~es_document() {
     }
 }
 
+/*
 Error es_document::load(const char* path) {
     std::ifstream stream(path);
     if(!stream || !document_token_array_map.at(this)) return -1;
@@ -61,26 +62,26 @@ Error es_document::load(const char* path) {
 #endif // DEBUG
 
     std::wstring documentURL = std::wstring_convert<std::codecvt_utf8<wchar_t>>{}.from_bytes(path);
-    /**
+    
      * https://en.cppreference.com/w/cpp/locale/codecvt_utf8_utf16
      * char  utf8[ES_file_line_length_max];
      * short utf16[ES_file_line_length_max];
      * stream.getline(utf8,ES_file_line_length_max);
-     */
+     
     unsigned int line_index = 0;
     unsigned int char_index = 0;
     bool meet_syntax_error  = false;
-    /** 编码测试 */
+    编码测试 
     //std::ofstream ostream("./libes/test/unicode.txt");
     for(std::string line; std::getline(stream,line);) {
         if(meet_syntax_error) break;
         // std::string line; std::getline(stream,line);
         char_index = 0;
         std::wstring wline = std::wstring_convert<std::codecvt_utf8<wchar_t>>{}.from_bytes(line);
-        /** 编码测试 */
+        编码测试
         //ostream.write(std::wstring_convert<std::codecvt_utf8<wchar_t>>{}.to_bytes(wline).c_str(), std::wstring_convert<std::codecvt_utf8<wchar_t>>{}.to_bytes(wline).length() * sizeof(wchar_t));
         /** 行尾测试
-         */
+        
         es_token_array tokens;
         while(char_index < wline.length() && !(wline[char_index] == L'\n' || wline[char_index] == L'\t' || wline[char_index] == L'\r')){
             // std::cout << "deal with - line : " << line_index << " char " << index << "    " << line[index] << std::endl;
@@ -112,7 +113,7 @@ Error es_document::load(const char* path) {
         document_tokens.append(tokens);
         line_index ++;
     }
-    /** 编码测试 */
+    编码测试
     // ostream.close();
 #ifdef DEBUG
     std::cout << "tokens : " << std::endl;
@@ -122,6 +123,25 @@ Error es_document::load(const char* path) {
 #endif
     }
 
+    return 0;
+}
+*/
+
+Error es_document::load(const char* path){
+    String token;
+    String content;
+    Index  index = 0;
+
+    while(index < content.length()){
+        load_token(token,content,index);
+        if(token == es_token_keyword_break){
+            ASTBreak* e = new ASTBreak();
+        }
+    }
+
+    return 0;
+}
+Error es_document::load_token(String& token, String& content, Index& index){
     return 0;
 }
 

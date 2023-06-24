@@ -34,11 +34,12 @@ public:
     es_document();
    ~es_document();
 public:
-    virtual Error load(const char* path);
-    virtual ASTScope* load_scope();
-    virtual ASTClass* load_class();
-    virtual ASTFunction* load_function();
-    virtual ASTExpression* load_expression();
+    Error load(const char* path);
+    Error load_token(String& token,String& content,Index& index);
+    ASTScope* load_scope();
+    ASTClass* load_class();
+    ASTFunction* load_function();
+    ASTExpression* load_expression();
 public:
     es_element* build();
 };
