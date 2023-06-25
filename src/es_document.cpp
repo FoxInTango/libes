@@ -138,8 +138,8 @@ Error es_document::load(const char* path){
     return 0;
 }
 Error es_document::load_token(String& token, String& content, Index& index){
-    while(content[index] == es_token_mark_space) index ++;
-    while(content[index] != es_token_mark_space){
+    while(content[index] == es_token_mark_space[0]) index ++;
+    while(content[index] != es_token_mark_space[0]){
         token += content[index];
         index ++;
     }
