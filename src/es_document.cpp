@@ -45,6 +45,10 @@ es_document::es_document() {
 es_document::~es_document() {
 }
 
+ASTElement* es_document::currentElement(){
+    return this->element_stack.size() ? this->element_stack[this->element_stack.size() - 1] : 0;
+}
+
 /*
 Error es_document::load(const char* path) {
     std::ifstream stream(path);
@@ -142,7 +146,14 @@ Error es_document::load_token(String& token, String& content, Index& index){
     return 0;
 }
 
-ASTScope* es_document::load_scope(){ return 0; }
-ASTClass* es_document::load_class() { return 0; }
-ASTFunction* es_document::load_function() { return 0; }
-ASTExpression* es_document::load_expression() { return 0; }
+ASTElement* es_document::load_element(String& token, String& content, Index& index,ASTElement* supper,const es_element_type& type){
+    switch(type){
+    case es_element_function:{
+        ASTFunction* e = new ASTFunction();
+        if(supper){
+            supper->appendSubelement(e);
+        }
+    }break;
+    }
+    return 0;
+}

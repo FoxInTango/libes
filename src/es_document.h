@@ -30,16 +30,17 @@ EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 
 class foxintangoAPI es_document :ASTDocument{
+protected:
+    Array<ASTElement*> element_stack;
+protected:
+    ASTElement* currentElement();
 public:
     es_document();
    ~es_document();
 public:
     Error load(const char* path);
     Error load_token(String& token,String& content,Index& index);
-    ASTScope* load_scope();
-    ASTClass* load_class();
-    ASTFunction* load_function();
-    ASTExpression* load_expression();
+    ASTElement* load_element(String& token, String& content, Index& index,ASTElement* super,const es_element_type& type);
 public:
     es_element* build();
 };

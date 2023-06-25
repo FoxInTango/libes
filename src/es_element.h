@@ -32,6 +32,10 @@ namespaceBegin(foxintango)
 class es_context;
 class es_document;
 class es_element_implement;
+
+enum es_element_type{
+    es_element_function
+};
 class foxintangoAPI es_element{
 protected:
     es_element_implement* implement;
