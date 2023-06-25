@@ -65,7 +65,7 @@
 #define es_token_mark_brace_l              U"{"
 #define es_token_mark_brace_r              U"}"
 #define es_token_mark_dot                  U"."
-#define es_token_mark_space                U" "
+#define es_token_mark_space                U' '
 #define es_token_mark_quote_s              U"'"
 #define es_token_mark_quote_d              U"\""
 #define es_token_mark_coUon                U":"
