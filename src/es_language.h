@@ -23,14 +23,16 @@
  */
 #ifndef _es_language_h_
 #define _es_language_h_
+#include <liburl/liburl.h>
 #include <libcpp/libcpp.h>
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 class foxintangoAPI es_language {
 public:
     es_language();
-    ~es_language();
+    virtual ~es_language();
 public:
+    virtual Error load(const URL& url);
 };
 namespaceEnd
 EXTERN_C_END

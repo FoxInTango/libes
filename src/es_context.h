@@ -25,22 +25,25 @@
 #define _es_context_h_
 #include "es_document.h"
 #include "es_element.h"
+#include <liburl/liburl.h>
 #include <libcpp/libcpp.h>
 
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
-class foxintangoAPI es_context{
+class foxintangoAPI es_context :public ASTContext{
 public:
     es_context();
    ~es_context();
 public:
     es_document* document_at(char* url);
 public:
-    int append_global_element(es_element* e,const char* name=nullptr);
+    int insert_global_element(es_element* e,const char* name=nullptr);
     int remove_global_element(es_element* e);
     int remove_global_element(const char* name=nullptr);
 public:
-    int load_document();
+    Error load_document(const URL& url);
+public:
+    Error load_language_module(const URL& url);
 };
 namespaceEnd
 EXTERN_C_END

@@ -22,10 +22,9 @@
  * IN THE SOFTWARE.
  */
 
+ #include "es_language.h"
  #include "es_context.h"
- #include "es_document.h"
  #include "es_element.h"
- #include "es_token.h"
  #include <libcpp/libcpp.h>
 EXTERN_C_BEGIN
  void foxintangoAPI libes_init();
