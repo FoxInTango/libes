@@ -24,8 +24,7 @@
 
  #include "es_language.h"
  #include "es_context.h"
- #include "es_element.h"
  #include <libcpp/libcpp.h>
 EXTERN_C_BEGIN
- void foxintangoAPI libes_init();
+void foxintangoAPI libes_init();
 EXTERN_C_END
