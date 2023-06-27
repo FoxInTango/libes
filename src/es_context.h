@@ -29,6 +29,9 @@
 
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
+/**
+ * 判断文件类型,选择加载模块 
+ */
 class foxintangoAPI es_context :public ASTContext{
 public:
     es_context();
@@ -43,6 +46,11 @@ public:
     Error load_document(const URL& url);
 public:
     Error load_language_module(const URL& url);
+public:
+    /**
+     * script module & native module 
+     */
+    Error load_module(const URL& url);
 };
 namespaceEnd
 EXTERN_C_END
