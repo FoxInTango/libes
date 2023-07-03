@@ -26,5 +26,10 @@
  #include "es_context.h"
  #include <libcpp/libcpp.h>
 EXTERN_C_BEGIN
+/**
+ * 1,load standard modules
+ * 2,load language modules
+ * 3,load others
+ */
 void foxintangoAPI libes_init();
 EXTERN_C_END
