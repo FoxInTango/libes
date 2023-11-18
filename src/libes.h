@@ -22,6 +22,8 @@
  * IN THE SOFTWARE.
  */
 
+ #ifndef _LIB_ES_H_
+ #define _LIB_ES_H_
  #include "es_language.h"
  #include "es_context.h"
  #include <libcpp/libcpp.h>
@@ -33,3 +35,4 @@ EXTERN_C_BEGIN
  */
 void foxintangoAPI libes_init();
 EXTERN_C_END
+#endif
