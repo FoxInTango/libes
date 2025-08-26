@@ -18,6 +18,7 @@
  *  抽象控制对象
  */
 
+
 /** Todo
  *  bool ? x : y 
  *  https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators
