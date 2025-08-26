@@ -245,7 +245,7 @@ ifneq (${SUPER_MAKE_CONFIG_DIR},${ROOT_MAKE_CONFIG_DIR})
 	@echo "	@echo SUPER_MAKE_CONFIG_DIR=${SUPER_MAKE_CONFIG_DIR} >> $(MAKE_CONFIG_DIR)/super" >> $(SUPER_MAKE_CONFIG_DIR)/depend.dir/$(TARGET_NAME).mk
 	@echo "	cd $(MAKE_FILE_DIR) && $(MAKE) echo"                                              >> $(SUPER_MAKE_CONFIG_DIR)/depend.dir/$(TARGET_NAME).mk
 	@echo "	-rm $(MAKE_CONFIG_DIR)/super"                                                     >> $(SUPER_MAKE_CONFIG_DIR)/depend.dir/$(TARGET_NAME).mk
-ifeq ($(wildcard $(ROOT_MAKE_CONFIG_DIR)/$(TARGET_NAME).mk),)
+ifeq ($(wildcard $(ROOT_MAKE_CONFIG_DIR)/depend.dir/$(TARGET_NAME).mk),)
 #prepare.3
 	@echo "DEPEND_TARGETS  += $(TARGET_NAME).build"                                           >> $(ROOT_MAKE_CONFIG_DIR)/depend.dir/$(TARGET_NAME).mk
 	@echo "ECHO_TARGETS    += $(TARGET_NAME).echo"                                            >> $(ROOT_MAKE_CONFIG_DIR)/depend.dir/$(TARGET_NAME).mk
