@@ -27,10 +27,10 @@
 #include <libcpp/libcpp.h>
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
-class foxintangoAPI es_language {
+class foxintangoAPI ESLanguage {
 public:
-    es_language();
-    virtual ~es_language();
+    ESLanguage();
+    virtual ~ESLanguage();
 public:
     virtual Error load(const URL& url);
 };

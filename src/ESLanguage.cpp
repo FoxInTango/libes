@@ -1,9 +1,9 @@
-#include "es_language.h"
+#include "ESLanguage.h"
 using namespace foxintango;
 
-es_language::es_language(){}
-es_language::~es_language(){}
+ESLanguage::ESLanguage(){}
+ESLanguage::~ESLanguage(){}
 
-Error es_language::load(const URL& url){
+Error ESLanguage::load(const URL& url){
     return 1;
 }

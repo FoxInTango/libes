@@ -1,4 +1,4 @@
-#include "es_context.h"
+#include "ESContext.h"
 #include <vector>
 #include <map>
 #include <set>
@@ -11,14 +11,14 @@
 #include <locale>
 using namespace foxintango;
 
-es_context::es_context(){
+ESContext::ESContext(){
     
 }
 
-es_context::~es_context(){
+ESContext::~ESContext(){
     
 }
 
-ASTDocument* es_context::document_at(char* path){
+ASTDocument* ESContext::document_at(char* path){
     return nullptr;
 }

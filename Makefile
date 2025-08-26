@@ -5,7 +5,9 @@ MAKE_CONFIG_DIR           = $(MAKE_FILE_DIR).make
 PROJECT_MODULE_MAKEFILES += $(wildcard $(MAKE_CONFIG_DIR)/depend.dir/*.mk)
 include $(PROJECT_MODULE_MAKEFILES)
 include $(MAKE_CONFIG_DIR)/config
+ifneq ($(wildcard $(MAKE_CONFIG_DIR)/super),)
 include $(MAKE_CONFIG_DIR)/super
+endif
 include $(MAKE_CONFIG_DIR)/target
 
 # ** Project Settings **

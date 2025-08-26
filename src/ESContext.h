@@ -32,10 +32,10 @@ namespaceBegin(foxintango)
 /**
  * 判断文件类型,选择加载模块 
  */
-class foxintangoAPI es_context :public ASTContext{
+class foxintangoAPI ESContext :public ASTContext{
 public:
-    es_context();
-   ~es_context();
+    ESContext();
+   ~ESContext();
 public:
     ASTDocument* document_at(char* url);
 public:
